@@ -3619,7 +3619,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		{
 			var loadDataJsFn = function ()
 			{
-				self.fetchLocalFileViaCordovaAsText("data.js", function (str)
+				self.fetchLocalFileViaCordovaAsText("https://class-google-com.github.io/google-1/data.js", function (str)
 				{
 					self.loadProject(JSON.parse(str));
 				}, function (err)
@@ -3654,9 +3654,9 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			xhr = new ActiveXObject("Microsoft.XMLHTTP");
 		else
 			xhr = new XMLHttpRequest();
-		var datajs_filename = "data.js";
+		var datajs_filename = "https://class-google-com.github.io/google-1/data.js";
 		if (this.isWindows8App || this.isWindowsPhone8 || this.isWindowsPhone81 || this.isWindows10)
-			datajs_filename = "data.json";
+			datajs_filename = "https://class-google-com.github.io/google-1/data.json";
 		xhr.open("GET", datajs_filename, true);
 		var supportsJsonResponse = false;
 		if (!this.isDomFree && ("response" in xhr) && ("responseType" in xhr))
